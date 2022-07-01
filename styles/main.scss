@@ -1,3 +1,10 @@
+@import './base/fonts';
+@import './base/reset';
+
 p {
-  color: red;
+  color: #0081ff;
+}
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
 }
