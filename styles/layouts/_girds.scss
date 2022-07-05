@@ -31,11 +31,9 @@ $gutter: 20px;
 $sm-columns: 4;
 $sm-margin: 5px;
 
-
 $md-columns: 12;
 $md-margin: 30px;
 $md-max-container: 960px + $md-margin * 2;
-
 
 $lg-columns: 12;
 $lg-unit: 75px;
@@ -55,7 +53,7 @@ $lg-max-container: ($lg-unit + $gutter) * $lg-columns;
     padding: 0 $gutter / 2;
   }
 
-  @media screen and(min-width: $md-breakpoint) {
+  @include responsive(T) {
     max-width: $md-max-container;
     padding: 0 $md-margin;
 
@@ -66,7 +64,7 @@ $lg-max-container: ($lg-unit + $gutter) * $lg-columns;
     }
   }
 
-  @media screen and(min-width: $lg-breakpoint) {
+  @include responsive(D) {
     max-width: $lg-max-container;
     padding: 0;
 
