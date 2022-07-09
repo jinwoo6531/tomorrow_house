@@ -2,6 +2,11 @@
   @include inline-flexbox;
   padding: 0 8px;
   border-radius: 4px;
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
 }
 
 //Butoon style
@@ -9,12 +14,21 @@
   @extend %btn-base;
   color: $white;
   background-color: $blue;
+  transition: background-color 200ms ease-in-out;
+
+  &:not(:disabled):hover {
+    background-color: $blue-dark;
+  }
 }
 
 .btn-sencondary {
   @extend %btn-base;
   color: $primary;
   background-color: $border;
+
+  :not(:disabled):hover {
+    background-color: $border;
+  }
 }
 
 .btn-outlined {
@@ -22,12 +36,20 @@
   color: $blue;
   background-color: $white;
   border: 1px solid $blue;
+
+  :not(:disabled):hover {
+    background-color: $blue-light;
+  }
 }
 
 .btn-ghost {
   @extend %btn-base;
   color: $primary;
   background-color: transparent;
+
+  &:not(:disabled):hover {
+    color: $secondary;
+  }
 }
 
 //Button sizes
